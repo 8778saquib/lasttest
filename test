@@ -1,0 +1,24 @@
+
+read -p "1.add 2.sub 3.mul 4.div :" c 
+case $c in
+1)
+read -p "enter value" a b
+add=`expr $a + $b`
+echo "$add";;
+
+2)
+read -p "enter value" a b
+sub=`expr $a - $b`
+echo "$sub";;
+
+3)
+read -p "enter value" a b
+mul=`expr $a * $b`
+echo "$mul";;
+
+4)
+read -p "enter value" a b
+div=`expr $a / $b`
+echo "$div";;
+*)
+esac
