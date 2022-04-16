@@ -1,0 +1,13 @@
+
+#! /bin/bash -x
+declare -A biodata
+read -p "Enter your first name: " first
+read -p "enter your last name: " last
+read -p "enter your mobile number: " mob
+read -p "enter you email ID" email
+
+biodata=(["first name"]=$first ["last name"]=$last ["Mobile num"]=$mob ["Email"]=$email)
+for bio in "${!biodata[@]}";
+do
+        echo $bio - "${biodata[$bio]}";
+done
